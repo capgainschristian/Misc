@@ -28,6 +28,12 @@ alias fw='grep -Rnw . -e'
 alias h='history | grep'
 alias ll='ls -ahlG'
 alias mkdir='mkdir -pv'
+alias gcm='git commit -m'
+alias gc='git checkout'
+alias gs='git status'
+alias gp='git pull'
+alias gco='git checkout origin/main'
+alias gd='git branch -D'
 
 ## pass options to free ##
 alias meminfo='free -m -l -t'
