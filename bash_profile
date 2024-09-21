@@ -35,6 +35,9 @@ alias gp='git pull'
 alias gco='git checkout origin/main'
 alias gd='git branch -D'
 
+## remove all docker objects
+alias rda='docker system prune -af --volumes'
+
 ## pass options to free ##
 alias meminfo='free -m -l -t'
 
