@@ -28,6 +28,8 @@ alias fw='grep -Rnw . -e'
 alias h='history | grep'
 alias ll='ls -ahlG'
 alias mkdir='mkdir -pv'
+
+## git commands
 alias gcm='git commit -m'
 alias gc='git checkout'
 alias gs='git status'
