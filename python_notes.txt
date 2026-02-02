@@ -1,0 +1,95 @@
+#!/usr/bin/python3
+#LISTS, TUPLES, AND DICTS
+
+x = [1,2,3,4,5]                                 #unpacking
+print(*x)
+
+courses = ['History','Math','Physics','CompSci']
+
+for index, course in enumerate(courses):            ##Adding index to loop
+    print(index, course)
+
+nums = [1,5,2,4,3]
+
+
+course_str = '-'.join(courses)                      #Turning list to str
+print(course_str)
+
+new_list = course_str.split('-')                    #Turning str to list
+print(new_list)
+
+
+courses.sort(reverse=True)                          #Reverse sort
+nums.sort()                                         #Sort
+
+print(courses.index('CompSci'))                     #Find index
+
+print(courses)
+print(nums)
+
+courses.insert(0, 'Art')                            #Inserting data
+
+courses.insert(0, nums)                             #Inserting a list into another list
+courses.extend(nums)                                #Combining a list together
+
+sorted_courses = sorted(courses)                    #Doesn't change value
+print(sorted_courses)
+
+cs_courses = {'History','Math','Physics','CompSci'}
+art_courses = {'History','Math','Art','Design'}
+
+print(cs_courses.intersection(art_courses))         #Find similarities
+print(cs_courses.difference(art_courses))           #Find differences
+print(cs_courses.union(art_courses))                #Combining both dicts
+
+
+names = ['Tim','Bill','Joe']
+ages = [19,64,34,76]
+fav_color = ['blue','red','green']
+
+print(list(zip(names, ages, fav_color)))                #combines lists into a tuple
+
+for name, age, color in zip(names, ages, fav_color):    #print as str
+    print(name, age, color)
+
+for tup in zip(names, ages, fav_color):                 #combines lists into tuples
+    print(tup)
+
+x = [i for i in range(5)]                               #Simple list comprehension
+print(x)
+
+x = [i for i in range(5) if i%2 == 0]                   #Complex list comprehension
+print(x)
+
+x =[[x,y] for x, y in zip(range(5), range(5,10))]
+print(x)
+
+x = [1,1,1,1,1,1,2,2,2,3,3,4,5,6,6,6,7,7,8]             #Find the most recurring item in a list
+print(max(set(x), key=x.count))
+
+
+
+my_list = ["hello", "tim", 4, 5]
+print(**my_list)										#Splat/unpack iterables
+
+
+
+function_args = {"name": "tim", "age": 5}
+
+def test1(name, age):
+    print(name, age)
+
+test1(**function_args)									#Passes the name and age
+
+
+def test2(**kwargs):
+    print(kwargs)
+
+test2(name="tim", height=100, tim="cool")				#Unlimited pairs
+
+
+
+def test3(*args):
+    print(*args)
+
+test3("tim", 5, True)									#Unlimited tuple
